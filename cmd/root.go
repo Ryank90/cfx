@@ -43,7 +43,7 @@ func init() {
 	}()
 
 	rootCmd.Flags().BoolVarP(&rootFlags.Version, "version", "v", false, "show version information.")
-	rootCmd.PersistentFlags().StringVar(&GlobalFlags.ConfigFile, "config", "config.yaml", "configuration file path (default: ./config.yaml).")
+	rootCmd.PersistentFlags().StringVar(&GlobalFlags.ConfigFile, "config", "bot.yaml", "configuration file path (default: ./bot.yaml).")
 	rootCmd.PersistentFlags().CountVarP(&GlobalFlags.OutputToScreen, "output", "o", "show verbose information when trading.")
 }
 
