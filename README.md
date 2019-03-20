@@ -1,1 +1,1 @@
-# cfx
+# CFX (Cryptocurrency Bot)
