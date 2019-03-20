@@ -21,7 +21,7 @@ var rootFlags struct {
 var rootCmd = &cobra.Command{
 	Use:   "cfx",
 	Short: "CFX cryptocurrency trading bot.",
-	Long:  "CFX is a cryptocurrency trading bot that interfaces with multiple exchanges to perform buy and sell actions on your behalf.",
+	Long:  `CFX is a cryptocurrency trading bot that interfaces with multiple exchanges to perform buy and sell actions on your behalf.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		if rootFlags.Version {
 			fmt.Printf("%s\n", version)
