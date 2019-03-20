@@ -8,7 +8,7 @@ import (
 
 var tradeCmd = &cobra.Command{
 	Use:   "trade",
-	Short: "",
+	Short: "Starts the bot to perform trades from saved configuration.",
 	Long:  ``,
 	Run:   tradeCommand,
 }
