@@ -1,1 +1,3 @@
 # CFX (Cryptocurrency Bot)
+
+Currently a work in-progress...
