@@ -40,4 +40,14 @@ type StrategyConfig struct {
 type MarketConfig struct {
 	// Market name.
 	Name string `yaml:"market"`
+	//
+	Exchanges []ExchangeBindingConfig `yaml:"bindings"`
+}
+
+// ExchangeBindingConfig stores the binding of market names between notation and exchange ticker.
+type ExchangeBindingConfig struct {
+	//
+	Name string `yaml:"exchange"`
+	//
+	MarketName string `yaml:"market_name"`
 }

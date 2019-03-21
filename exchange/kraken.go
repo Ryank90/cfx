@@ -3,7 +3,7 @@ package exchange
 type kraken struct {
 }
 
-func krakenExchange() Exchange {
+func krakenExchange(publicKey string, secretKey string, depositAddrs map[string]string) Exchange {
 	return &kraken{}
 }
 
