@@ -2,6 +2,7 @@ package cfx
 
 import (
 	"cfx/config"
+	"cfx/exchange"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -56,4 +57,9 @@ func tradeCommand(cmd *cobra.Command, args []string) {
 	fmt.Println("Completed!")
 
 	fmt.Println("Getting exchange information...")
+	w := make([]exchange.Exchange, len(cfg.Exchanges))
+	for i, excfg := range cfg.Exchanges {
+		w[i] = exchange.InitExchange(excfg, cfg.SimulationMode, excfg.TestBalances, excfg.DepositAddress)
+	}
+	fmt.Println("Completed!")
 }
