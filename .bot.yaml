@@ -1,0 +1,13 @@
+simulation_mode: false
+exchanges:
+- exchange_name: kraken
+  exchange_uri: https://www.kraken.com
+  public_key: ff
+  secret_key: fff
+  deposit_addresses: {}
+  test_balances: {}
+strategies:
+- strategy: strategy_name
+  markets:
+  - market: BTC-ETH
+    bindings: []
