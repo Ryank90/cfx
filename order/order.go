@@ -1,4 +1,4 @@
-package main
+package order
 
 import (
 	"time"
@@ -16,8 +16,8 @@ const (
 	Bid orderType = iota
 )
 
-// order represents a single order within the orderBook for a market.
-type order struct {
+// Order represents a single order within the orderBook for a market.
+type Order struct {
 	// Value of the trade.
 	Value decimal.Decimal
 	// Quantity of coins for this order.
@@ -28,13 +28,13 @@ type order struct {
 	Timestamp time.Time
 }
 
-// orderBook represents a standard order book implementation.
-type orderBook struct {
-	Asks []order `json:"asks,required"`
-	Bids []order `json:"bids,required"`
+// Book represents a standard order book implementation.
+type Book struct {
+	Asks []Order `json:"asks,required"`
+	Bids []Order `json:"bids,required"`
 }
 
 // Returns the order total in the base currency.
-func (o order) total() decimal.Decimal {
+func (o Order) total() decimal.Decimal {
 	return o.Qty.Mul(o.Value)
 }

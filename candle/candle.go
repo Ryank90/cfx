@@ -1,12 +1,14 @@
-package main
+package candle
 
 import (
 	"time"
 
+	"github.com/Ryank90/cfx/order"
 	"github.com/shopspring/decimal"
 )
 
-type candleStick struct {
+// Stick does something.
+type Stick struct {
 	// Represents the highest value obtained during candle period.
 	High decimal.Decimal
 	//
@@ -19,11 +21,12 @@ type candleStick struct {
 	Volume decimal.Decimal
 }
 
-type candleStickChart struct {
+// StickChart does something.
+type StickChart struct {
 	//
 	CandlePeriod time.Duration
 	//
-	CandleSticks []candleStick
+	CandleSticks []Stick
 	//
-	OrderBook []order
+	OrderBook []order.Order
 }
