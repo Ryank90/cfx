@@ -1,8 +1,9 @@
-package main
+package market
 
 import "github.com/shopspring/decimal"
 
-type market struct {
+// Market does something.
+type Market struct {
 	//
 	Name string `json:"name,required"`
 	//
@@ -13,7 +14,8 @@ type market struct {
 	ExchangeName map[string]string `json:"-"`
 }
 
-type marketSummary struct {
+// Summary does something.
+type Summary struct {
 	//
 	High decimal.Decimal `json:""`
 	//
