@@ -1,12 +1,13 @@
 package cfx
 
 import (
-	"cfx/config"
 	"fmt"
 	"io/ioutil"
 
-	"github.com/spf13/cobra"
+	"github.com/Ryank90/cfx/config"
 	yaml "gopkg.in/yaml.v2"
+
+	"github.com/spf13/cobra"
 )
 
 var initFlags struct {

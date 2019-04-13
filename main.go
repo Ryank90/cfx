@@ -1,6 +1,6 @@
 package main
 
-import cfx "cfx/cmd"
+import cfx "github.com/Ryank90/cfx/cmd"
 
 func main() {
 	cfx.Execute()

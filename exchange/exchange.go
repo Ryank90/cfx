@@ -22,7 +22,7 @@ type Exchange interface {
 	// Gets the order book from the exchange.
 	GetOrderBook(m *market.Market) ([]order.Book, error)
 	// Gets the market summary from the exchange.
-	GetMarketSummary(m *market.Market) ([]market.Summary, error)
+	GetMarketSummary(m *market.Market) (*market.Summary, error)
 	// Performs a limit buy action.
 	BuyLimit(m *market.Market, amount float64, limit float64) (string, error)
 	// Performs a limit sell action.
