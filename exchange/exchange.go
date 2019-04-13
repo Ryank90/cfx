@@ -17,27 +17,27 @@ type Exchange interface {
 	Name() string
 	// Returns a string version of an object.
 	String() string
-	//
+	// Gets the candle data from the exchange.
 	GetCandles(m *market.Market) ([]candle.Stick, error)
-	//
+	// Gets the order book from the exchange.
 	GetOrderBook(m *market.Market) ([]order.Book, error)
-	//
+	// Gets the market summary from the exchange.
 	GetMarketSummary(m *market.Market) ([]market.Summary, error)
-	//
+	// Performs a limit buy action.
 	BuyLimit(m *market.Market, amount float64, limit float64) (string, error)
-	//
+	// Performs a limit sell action.
 	SellLimit(m *market.Market, amount float64, limit float64) (string, error)
-	//
+	// Performs a buy action on a specific market.
 	BuyMarket(m *market.Market, amount float64) (string, error)
-	//
+	// Performs a sell action on a specific market.
 	SellMarket(m *market.Market, amount float64) (string, error)
-	//
-	CalculateTradingFees()
-	//
-	CalculateWithdrawFees()
-	//
+	// Calculate the trading fees for a specific action.
+	CalculateTradingFees(m *market.Market, amount float64, limit float64, orderType TradeType) float64
+	// Calculate the withdrawal fee for a specific action.
+	CalculateWithdrawFees(m *market.Market, amount float64) float64
+	// Gets a balance for the specified user.
 	GetBalance(s string) (*decimal.Decimal, error)
-	//
+	// Gets the deposit address for the specified coin on the exchange if it is present.
 	GetDepositAddress(ct string) (string, bool)
 	// Performs a withdrawal from an exchange to the desired deposit address.
 	Withdraw(depAddr string, ct string, amount float64) error
