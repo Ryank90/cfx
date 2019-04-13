@@ -1,11 +1,12 @@
 package cfx
 
 import (
-	"cfx/config"
-	"cfx/exchange"
 	"fmt"
 	"io/ioutil"
 	"os"
+
+	"github.com/Ryank90/cfx/config"
+	"github.com/Ryank90/cfx/exchange"
 
 	"github.com/spf13/cobra"
 	yaml "gopkg.in/yaml.v2"
