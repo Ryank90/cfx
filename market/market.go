@@ -29,3 +29,20 @@ type Summary struct {
 	//
 	Last decimal.Decimal `json:""`
 }
+
+// Ticker does something...
+type Ticker struct {
+	//
+	Ask decimal.Decimal `json:"Ask"`
+	//
+	Bid decimal.Decimal `json:"Bid"`
+	//
+	Last decimal.Decimal `json:"Last"`
+}
+
+// UpdateFromTicker does something...
+func (m *Summary) UpdateFromTicker(t Ticker) {
+	m.Ask = t.Ask
+	m.Bid = t.Bid
+	m.Last = t.Last
+}
